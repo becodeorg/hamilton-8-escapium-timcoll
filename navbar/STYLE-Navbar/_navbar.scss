@@ -1,0 +1,33 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Montserrat&display=swap');
+
+@import'./_variables.scss';
+@import'./_reset.scss';
+
+
+#navbar {
+    background-color: $DARKEST_BG;
+    color: $NAV_FONT;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    font-family: $PARAGRAPHS;
+}
+
+
+
+
+// || RESPONSIVE
+    
+    // Mobile
+@media only screen and (min-width: 412px){
+
+}
+    // Tablet
+@media only screen and (min-width: 768px) {
+
+}
+    // Desktop
+@media only screen and (min-width: 1920px){
+
+}
