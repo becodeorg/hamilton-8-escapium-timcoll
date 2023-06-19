@@ -28,4 +28,57 @@
   background-color: blue;
 }
 
+#_GetInTouch {
+  display: flex;
+  flex-wrap: wrap;
+}
+#_GetInTouch iframe {
+  width: 50%;
+  height: 80vh;
+}
+#_GetInTouch div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: rgb(39, 37, 37);
+  width: 50%;
+  color: #aaaaaa;
+}
+#_GetInTouch div input {
+  background-color: #404040;
+  color: #aaaaaa;
+  background-color: rgb(39, 37, 37);
+  color: #aaaaaa;
+  border-color: transparent transparent #404040 transparent;
+  width: 50%;
+  margin-left: 5vw;
+}
+#_GetInTouch div input[type=submit] {
+  width: 25%;
+  color: #aaaaaa;
+  background-color: transparent;
+  padding: 1rem 2.5rem;
+  font-size: 0.875rem;
+  border-radius: 2rem;
+  border-color: #404040;
+  cursor: pointer;
+}
+#_GetInTouch div input[type=submit]:hover {
+  background-color: #7A7A7A;
+  color: #fff;
+  border-style: none;
+}
+#_GetInTouch div textarea {
+  background-color: rgb(39, 37, 37);
+  color: #aaaaaa;
+  border-color: transparent transparent #404040 transparent;
+  width: 50%;
+  margin-left: 5vw;
+}
+#_GetInTouch div h2 {
+  color: #f8f9fa;
+  font-size: 2.5em;
+  margin-left: 5vw;
+}
+
 /*# sourceMappingURL=style.css.map */

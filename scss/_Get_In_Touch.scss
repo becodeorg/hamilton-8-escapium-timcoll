@@ -1,0 +1,58 @@
+@import "./color";
+
+#_GetInTouch {
+    display: flex;
+    flex-wrap: wrap;
+    & iframe {
+        width: 50%;
+        height: 80vh;
+        
+    }
+    & div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: $bakcgrounColor;
+        width: 50%;
+        color: $color-txt;
+        & input {
+            background-color: $backColor;
+            color: $color-txt;
+            background-color: $bakcgrounColor;
+            color: $color-txt;
+            border-color: transparent transparent $backColor transparent;
+            width: 50%;
+            margin-left: 5vw;
+        }
+        & input[type=submit] {
+            width: 25%;
+            color: $color-txt;
+            background-color: transparent;
+            padding: 1rem 2.5rem;
+            font-size: 0.875rem;
+            border-radius: 2rem;
+            border-color: $backColor;
+            cursor: pointer;
+            
+            &:hover {
+                background-color: $color-hover;
+                color: $color-white;
+                border-style: none;
+            }
+        }
+        & textarea {
+            background-color: $bakcgrounColor;
+            color: $color-txt;
+            border-color: transparent transparent $backColor transparent;
+            width: 50%;
+            margin-left: 5vw;
+        }
+        & h2 {
+            color: $color-light;
+            font-size: 2.5em;
+            margin-left: 5vw;
+        }
+    }
+}
+
+
