@@ -9,6 +9,15 @@
     --navHeight: 72px;
 }
 
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+
 // || RESPONSIVE
     
     // Mobile
@@ -88,6 +97,10 @@
         height: var(--navHeight); 
     }
     
+    .menu-boutton {
+        display: none;
+    }
+
     .logo{
         width: 12%; //196px; //8wv;
         height: 100% //auto;
@@ -172,6 +185,10 @@
         height: var(--navHeight); 
     }
     
+    .menu-boutton {
+        display: none;
+    }
+
     .logo{
         width: 12%; //196px; //8wv;
         height: 100% //auto;
