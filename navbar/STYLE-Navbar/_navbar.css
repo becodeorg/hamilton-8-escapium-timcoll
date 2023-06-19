@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid red;
 }
 
 #navbar {
@@ -12,7 +11,59 @@
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-family: Hind, sans-serif;
+  width: 1536px; /* 100% */
+  height: 72px;
+}
+
+.logo {
+  width: 196px;
+  height: 100% img;
+  height-width: 100%;
+  height-height: auto;
+}
+
+.liens {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+}
+.liens li {
+  font-size: 16px;
+}
+.liens a:hover {
+  color: #fff;
+}
+
+.emtpy {
+  width: 20%;
+  height: auto;
+}
+
+.bouttons {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  width: 22%;
+  gap: 1rem;
+}
+.bouttons .book-now {
+  border: 2px solid #777;
+  padding: 7px 28px;
+  border-radius: 30px;
+  color: #fff;
+  text-transform: capitalize;
+}
+.bouttons .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bouttons .icons .vl {
+  width: 1px;
+  height: 1em;
+  background-color: #7e7e7e;
 }
 
 /*# sourceMappingURL=_navbar.css.map */

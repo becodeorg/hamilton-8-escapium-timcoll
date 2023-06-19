@@ -5,15 +5,73 @@
 @import'./_reset.scss';
 
 
+ 
 #navbar {
     background-color: $DARKEST_BG;
     color: $NAV_FONT;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-family: $PARAGRAPHS;
+    width: 1536px; /* 100% */;
+    height: 72px; 
 }
 
+.logo{
+    width: 196px; //8wv;
+    height: 100% //auto;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.liens {
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    li {
+        font-size: $BIG_SCREENS_P;
+    }
+    a:hover{
+        color: #fff;
+    }
+}
+.emtpy {
+    width: 20%;
+    height: auto;
+} 
+
+.bouttons {
+    display: flex;
+    justify-content: center;
+    font-size: $BIG_SCREENS_P;
+    width: 22%;
+    gap: 1rem;
+
+    .book-now {
+        border: 2px solid $NAV_FONT;
+        padding: 7px 28px;
+        border-radius: 30px;
+        color: #fff;
+        text-transform: capitalize;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .vl {
+            width: 1px;
+            height: 1em;
+            background-color: #7e7e7e;
+        }
+    }
+    .sign-in {
+        
+    }
+}
 
 
 
