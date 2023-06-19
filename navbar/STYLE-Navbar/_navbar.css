@@ -12,7 +12,7 @@
 @media only screen and (max-width: 768px) {
   #navbar {
     background-color: #1b1b1b;
-    color: rgb(228, 228, 228);
+    color: rgb(241, 241, 241);
     list-style-type: none;
     font-family: Hind, sans-serif;
     width: 68%;
@@ -32,7 +32,8 @@
     width: 100%;
     display: flex;
     padding: 0 2em;
-    border-bottom: 1px solid #7e7e7e;
+    border-bottom: 1px solid #3a3a3a;
+    align-items: center;
   }
   .liens li a {
     width: 100%;
@@ -87,6 +88,9 @@
   .liens li {
     font-size: 16px;
     text-transform: lowercase;
+  }
+  .liens li .fa-plus {
+    display: none;
   }
   .liens a:hover {
     color: #fff;
@@ -154,6 +158,9 @@
   .liens li {
     font-size: 16px;
     text-transform: lowercase;
+  }
+  .liens li .fa-plus {
+    display: none;
   }
   .liens a:hover {
     color: #fff;
