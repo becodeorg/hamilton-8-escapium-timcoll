@@ -27,13 +27,26 @@
 #_derniersection span {
   background-color: blue;
 }
+@media screen and (max-width: 768px) and (min-width: 0px) {
+  #_derniersection h2 {
+    font-size: 6vw;
+  }
+  #_derniersection p {
+    font-size: 4vw;
+  }
+  #_derniersection a {
+    font-size: 2vw;
+    width: 30%;
+    padding: 2vw;
+  }
+}
 
 #_GetInTouch {
   display: flex;
   flex-wrap: wrap;
 }
 #_GetInTouch iframe {
-  width: 50%;
+  min-width: 50%;
   height: 80vh;
 }
 #_GetInTouch div {
@@ -41,7 +54,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   background-color: rgb(39, 37, 37);
-  width: 50%;
+  min-width: 50%;
   color: #aaaaaa;
 }
 #_GetInTouch div input {
@@ -50,7 +63,7 @@
   background-color: rgb(39, 37, 37);
   color: #aaaaaa;
   border-color: transparent transparent #404040 transparent;
-  width: 50%;
+  width: 80%;
   margin-left: 5vw;
 }
 #_GetInTouch div input[type=submit] {
@@ -72,13 +85,44 @@
   background-color: rgb(39, 37, 37);
   color: #aaaaaa;
   border-color: transparent transparent #404040 transparent;
-  width: 50%;
+  width: 80%;
   margin-left: 5vw;
 }
 #_GetInTouch div h2 {
   color: #f8f9fa;
   font-size: 2.5em;
   margin-left: 5vw;
+}
+@media screen and (max-width: 1214px) and (min-width: 0px) {
+  #_GetInTouch iframe {
+    width: 100%;
+    height: 80vh;
+  }
+  #_GetInTouch div {
+    width: 100%;
+    padding: 2vw;
+  }
+  #_GetInTouch div input {
+    width: 75%;
+    margin: auto;
+    padding-top: 1vw;
+  }
+  #_GetInTouch div input[type=submit] {
+    margin-top: 2vw;
+    font-size: 2vw;
+    width: 20vw;
+    padding: 2vw;
+  }
+  #_GetInTouch div textarea {
+    margin: auto;
+    padding-top: 1vw;
+    width: 75%;
+  }
+  #_GetInTouch div h2 {
+    margin: auto;
+    padding-top: 1vw;
+    font-size: 6vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

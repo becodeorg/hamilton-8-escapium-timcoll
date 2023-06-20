@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     & iframe {
-        width: 50%;
+       min-width: 50%;
         height: 80vh;
         
     }
@@ -13,7 +13,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         background-color: $bakcgrounColor;
-        width: 50%;
+        min-width: 50%;
         color: $color-txt;
         & input {
             background-color: $backColor;
@@ -21,7 +21,7 @@
             background-color: $bakcgrounColor;
             color: $color-txt;
             border-color: transparent transparent $backColor transparent;
-            width: 50%;
+            width: 80%;
             margin-left: 5vw;
         }
         & input[type=submit] {
@@ -44,7 +44,7 @@
             background-color: $bakcgrounColor;
             color: $color-txt;
             border-color: transparent transparent $backColor transparent;
-            width: 50%;
+            width: 80%;
             margin-left: 5vw;
         }
         & h2 {
@@ -53,6 +53,38 @@
             margin-left: 5vw;
         }
     }
-}
+    @media screen and (max-width: 1214px) and (min-width: 0px) {
+    & iframe {
+        width: 100%;
+        height: 80vh;
+    }
+    & div {
+        width: 100%;
+        padding: 2vw;
+        & input {
+            width: 75%;
+            margin: auto;
+            padding-top: 1vw;
+        }
+        & input[type=submit] {
+            margin-top: 2vw;
+            font-size: 2vw;
+            width: 20vw;
+            padding: 2vw;
+        }
+        & textarea {
+            margin: auto;
+            padding-top: 1vw;
+            width: 75%;
+        }
+        & h2 {
+            margin: auto;
+            padding-top: 1vw;
+            font-size: 6vw;
+        }
+    }
+    }
 
+    
+}
 
