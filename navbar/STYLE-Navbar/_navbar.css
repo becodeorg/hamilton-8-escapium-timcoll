@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind&family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --navHeight: 72px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 768px) {
+  #navbar {
+    background-color: #1b1b1b;
+    color: rgb(241, 241, 241);
+    list-style-type: none;
+    font-family: Hind, sans-serif;
+    width: 68%;
+    margin: 0 1em;
+    border: 1px solid #000;
+  }
+  .logo {
+    display: none;
+  }
+  .liens {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .liens li {
+    height: var(--navHeight);
+    width: 100%;
+    display: flex;
+    padding: 0 2em;
+    border-bottom: 1px solid #3a3a3a;
+    align-items: center;
+  }
+  .liens li a {
+    width: 100%;
+    margin: auto;
+  }
+  .liens li:hover {
+    color: white;
+  }
+  .empty {
+    display: none;
+  }
+  .bouttons {
+    display: flex;
+    align-items: center;
+    height: var(--navHeight);
+    border-bottom: 1px solid #7e7e7e;
+    padding: 0 2em;
+    gap: 1em;
+  }
+  .bouttons .book-now, .bouttons .fa-magnifying-glass, .bouttons .vl {
+    display: none;
+  }
+  .bouttons .sign-in {
+    text-transform: capitalize;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #navbar {
+    background-color: rgba(27, 27, 27, 0.6705882353);
+    color: #777;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Hind, sans-serif;
+    width: 100%;
+    height: var(--navHeight);
+  }
+  .menu-boutton {
+    display: none;
+  }
+  .logo {
+    width: 12%;
+    height: 100% img;
+    height-width: 100%;
+    height-height: auto;
+  }
+  .liens {
+    width: 40%;
+    height: auto;
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+  }
+  .liens li {
+    font-size: 16px;
+    text-transform: lowercase;
+  }
+  .liens li .fa-plus {
+    display: none;
+  }
+  .liens a:hover {
+    color: #fff;
+  }
+  .emtpy {
+    width: 23%;
+    height: auto;
+  }
+  .bouttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 25%;
+    gap: 1rem;
+  }
+  .bouttons .book-now {
+    border: 2px solid #777;
+    padding: 7px 28px;
+    border-radius: 30px;
+    color: #fff;
+    text-transform: capitalize;
+  }
+  .bouttons .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bouttons .icons .vl {
+    width: 1px;
+    height: 1em;
+    background-color: #7e7e7e;
+    margin: 0 1em;
+  }
+  .bouttons .sign-in {
+    text-transform: uppercase;
+    color: #eeeeee;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #navbar {
+    background-color: rgba(27, 27, 27, 0.6705882353);
+    color: #777;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Hind, sans-serif;
+    width: 100%;
+    height: var(--navHeight);
+  }
+  .menu-boutton {
+    display: none;
+  }
+  .logo {
+    width: 12%;
+    height: 100% img;
+    height-width: 100%;
+    height-height: auto;
+  }
+  .liens {
+    width: 40%;
+    height: auto;
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+  }
+  .liens li {
+    font-size: 16px;
+    text-transform: lowercase;
+  }
+  .liens li .fa-plus {
+    display: none;
+  }
+  .liens a:hover {
+    color: #fff;
+  }
+  .emtpy {
+    width: 23%;
+    height: auto;
+  }
+  .bouttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 25%;
+    gap: 1rem;
+  }
+  .bouttons .book-now {
+    border: 2px solid #777;
+    padding: 7px 28px;
+    border-radius: 30px;
+    color: #fff;
+    text-transform: capitalize;
+  }
+  .bouttons .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bouttons .icons .vl {
+    width: 1px;
+    height: 1em;
+    background-color: #7e7e7e;
+    margin: 0 1em;
+  }
+  .bouttons .sign-in {
+    text-transform: uppercase;
+    color: #eeeeee;
+  }
+}
+
+/*# sourceMappingURL=_navbar.css.map */
