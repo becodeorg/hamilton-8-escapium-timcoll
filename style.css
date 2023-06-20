@@ -125,4 +125,12 @@
   }
 }
 
+#Phot_shots .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+#Phot_shots ul > li {
+  list-style-type: none;
+}
+
 /*# sourceMappingURL=style.css.map */
