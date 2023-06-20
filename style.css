@@ -125,11 +125,11 @@
   }
 }
 
-#Phot_shots .container {
+#Photo_shots .container {
   display: flex;
   flex-wrap: wrap;
 }
-#Phot_shots ul > li {
+#Photo_shots ul > li {
   list-style-type: none;
 }
 
