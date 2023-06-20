@@ -7,13 +7,26 @@
 }
 
 .bg-black {
-  background: black;
+  background: #222222;
 }
 
 footer ul {
   padding: 0;
   margin: 0;
-  list-style: none;
+  list-style-type: none;
+}
+footer ul li {
+  position: relative;
+}
+footer ul div.rounded {
+  background: #f60b0e;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: -20px;
+  visibility: hidden;
 }
 footer ul a {
   text-decoration: none;
@@ -32,6 +45,10 @@ footer ul li {
   padding: 10px;
 }
 
+.center {
+  text-align: center;
+}
+
 .social {
   width: 25%;
 }
@@ -42,13 +59,34 @@ footer ul li {
 }
 
 .social ul {
+  list-style: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
 .social li {
-  width: 50px;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 1s ease;
+}
+.social li:hover {
+  background: red;
+}
+.social li i {
+  width: 100%;
+}
+
+p span {
+  transition: all 1s ease-in;
+}
+
+p span:hover {
+  color: red;
 }
 
 .Working ul li {
@@ -59,25 +97,21 @@ footer ul li {
   display: block;
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    background-color: chocolate;
-  }
-  .social ul {
-    display: flex;
-    flex-direction: column;
-    height: 120px;
-  }
-  li {
-    font-size: 11px;
-  }
-  h2 {
-    font-size: 19px;
-  }
+.line {
+  height: 2px;
+  width: 45px;
+  background: red;
+  align-self: center;
+  margin-left: 10px;
 }
+
+.subtitle {
+  display: flex;
+}
+
 @media only screen and (max-width: 412px) {
   body {
-    background-color: red;
+    background-color: chocolate;
   }
   .footer-container {
     display: block;
@@ -87,8 +121,43 @@ footer ul li {
     margin-top: 50px;
   }
   .Working li {
-    width: 33%;
+    display: grid;
+    grid-template-columns: auto auto;
   }
+}
+.social ul {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+@media screen and (min-width: 412px) and (max-width: 768px) {
+  p, li {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  .footer-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2em;
+    padding: 7%;
+  }
+  .social ul {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .Working ul li {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.monserat {
+  font-family: "Montserrat";
+}
+
+.hind {
+  font-family: "Hind";
 }
 
 /*# sourceMappingURL=style.css.map */
