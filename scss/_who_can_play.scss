@@ -2,7 +2,7 @@
     
     
     @media screen and (min-width: 0px) and (max-width: 768px) {
-        padding: 20vw 0vw 20vw 0vw;
+        padding: 20vw 0vw 10vw 0vw;
         color: $color-white;
         & ul {
            margin-left: 5vw;
@@ -10,11 +10,22 @@
             padding: 10px;
             list-style-type: none;
             font-size: larger;
+            position: relative;
+            bottom: 200px;
+            
+            z-index: 1;
            }
         }
+        & div {
+            height: 250px;
+            background-image: linear-gradient(to right, rgb(92, 86, 86), transparent);
+            z-index: -1;
+        }
+
         background-image: url("../resources/images/gallery/room-7.jpg");
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
     }
 
 }
