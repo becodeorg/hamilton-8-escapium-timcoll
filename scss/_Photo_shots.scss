@@ -1,0 +1,62 @@
+@import "./color";
+
+#Photo_shots {
+    padding: 5vw;
+    background-color: $bakcgrounColor;
+    text-align: center;
+    color: $color-txt;
+    & h2 {
+        font-size: 3vw;
+    }
+    & a:first-child {
+        color: $color-rouge;
+    }
+    & .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: auto auto auto auto;
+        gap: 0.5vw;
+
+        & li > img {
+            width: 15vw;
+            border: transparent;
+
+            &:hover {
+                border: 1px solid red;
+            }
+        }
+    }
+    & a:last-child {
+        padding: 1rem 2.5rem;
+        font-size: 1rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        color: #fff;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+        margin: auto;
+        border-color: $color-white;
+        
+        &:hover {
+            background-color: $color-hover;
+            cursor: pointer;
+        }
+    }
+    & ul > li {
+        list-style-type: none;
+    }
+
+@media screen and (max-width: 768px) and (min-width: 0px) {
+    & .container {
+        display: grid;
+        flex-wrap: wrap;
+
+    }
+    background-color: blue;
+}
+
+
+}

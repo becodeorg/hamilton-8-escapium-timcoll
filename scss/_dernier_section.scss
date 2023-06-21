@@ -2,6 +2,7 @@
 
 #_derniersection{
 
+    padding: 5vw;
 
    & h2 {
     text-align: center;
@@ -28,12 +29,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15%;
+    width: 20%;
     margin: auto;
-}
-
- & span {
-    background-color: blue;
 }
 
 @media screen and (max-width: 768px) and (min-width: 0px) {
