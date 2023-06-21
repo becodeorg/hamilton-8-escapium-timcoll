@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/67e16e4a4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Document</title>
     <link rel="stylesheet" href="./nav.css">
 
@@ -15,7 +16,7 @@
             <img src="./IMG-Navbar/logo.png" alt="">
         </figure>
 
-        <div class="navbar">
+        <div class="navbar" id="menu">
             <a href="#home">home</a>
 
             <a href="#About">about</a>
@@ -63,7 +64,7 @@
             <a href="#contact">Contact</a>
 
             <div class="sign-in-mobile">
-                <a href=""><i class="fa-regular fa-user" style="color: #c3c3c3;"></i>Sign In</a>
+                <a href=""><i class="fa-regular fa-user-mobile" style="color: #fff;"></i>Sign In</a>
             </div>
         </div>
 
@@ -74,19 +75,19 @@
             <i class="fa-solid fa-magnifying-glass";"></i>            
             <div class="vl"></div>
             <i class="fa-regular fa-user" style="color: #c3c3c3;"></i>
-            <i class="fa-solid fa-bars" style="color: #c3c3c3;"></i>  
+            <i class="fa-solid fa-bars" id="menuButton" style="color: #c3c3c3;"></i>  
             <div class="sign-in-desktop">SIGN IN</div>    
         </section>
     </nav>
-
+    <script>
+      /* Selectionner le bouton menu et l'élément navbar */
+      const menuButton = document.getElementById("menuButton");
+      const menu = document.getElementById("menu");
+      menuButton.addEventListener('click', function () {
+          menu.classList.toggle("menu-open");
+      }) ;
+  </script>
   </header>  
-  <script>
-    let menuIcon = querySelector(".fa-bars");
-    menuIcon.addEventListener('click', (event) =>{
-        if (event = true)
-        
 
-    }) 
-</script>
 </body>
 </html>

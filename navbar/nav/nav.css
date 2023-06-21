@@ -21,7 +21,25 @@ header {
     position: relative;
 }
 
+nav section {
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
 @keyframes showMenu {
+    0% {
+        height: 0;
+    }
+
+
+    100% {
+        height: 90vh;
+    }
+}
+@keyframes showMenu2 {
     0% {
         transform: scaleY(0);
     }
@@ -49,8 +67,8 @@ header {
         position: absolute;
         top: 51px;
         background-color: var(--HEADER-BGCOLOR);
-        width: 40%;
-        display: none;
+        width: 15rem;
+
     }
 
     .navbar > a, .subnav > .subnavbtn {
@@ -81,7 +99,7 @@ header {
 
     .subnav:hover .subnav-content {
         transform-origin: top center;
-        animation: showMenu 0.6s ease-in-out forwards;
+        animation: showMenu2 0.6s ease-in-out forwards;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -115,36 +133,81 @@ header {
         text-transform: capitalize
     }
 
-    nav section {
-        margin-right: 10px;
+    .fa-user {
+        display: none;
     }
 
+    .book-now {
+        display: none;
+    }
+
+
     .fa-calendar {
-        border : 1px solid red;
+        border : 1px solid #333;
         padding : 10px;
         border-radius: 20px;
+        transition: background-color 0.2s linear 0.1s;
+
+        &:hover {
+            background-color: #333;
+        }
     }
 
     .fa-solid, .fa-regular {
-        margin-right: 5px;
+        margin-right: 10px;
+    }
+
+    .sign-in-desktop {
+        display: none;
+    }
+
+    /* Style pour afficher la navbar quand on clique sur l'icone menu */
+    nav > div {
+        display: none;    }
+
+    .menu-open {
+        display: block;
+        animation: showMenu 2s ease-in-out forwards;
+        overflow: hidden;
+    }
+
+    .fa-magnifying-glass {
+        color : var(--HEADER-COLOR);
+        transition: color 0.2s linear 0.1s;
+        
+        &:hover{
+            color: red;
+        }
     }
 
 }
 
 @media only screen and (min-width: 768px){
 
-    .sign-in-mobile {
+    .sign-in-mobile, .fa-user-mobile {
         display: none;
     }
 
-    header, img{
+    header {
         height: var(--TITLE-LINE-HEIGHT-desktop);
     } 
 
+    figure {
+        max-width: 20%;
+        min-height: var(--TITLE-LINE-HEIGHT-desktop);
+        margin: auto 0;
+    }
+
+    img{
+        max-height: var(--TITLE-LINE-HEIGHT-desktop);
+        width: 100%;
+    } 
+
     nav {
-        display: grid;
-        grid-template-columns: 1fr 2fr 2fr;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
+        margin: auto;
     }
 
       
@@ -209,7 +272,7 @@ header {
       /* When you move the mouse over the subnav container, open the subnav content */
       .subnav:hover .subnav-content {
         transform-origin: top center;
-        animation: showMenu 0.6s ease-in-out forwards;
+        animation: showMenu2 0.6s ease-in-out forwards;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -224,26 +287,27 @@ header {
         display: flex;
         align-items: center;
         justify-content: end;
-        gap: 2rem;
+        gap: 1vw;
+        max-width: 18vw; 
 
     }
 
 
     .book-now {
         border: 2px solid #777;
-        padding: 7px 28px;
+        padding: 7px 10px;
         border-radius: 30px;
         color: #fff;
         text-transform: capitalize;
         transition: background-color 0.2s linear 0.1s;
         font-size: 13px;
         font-weight: bold;
+        text-align: center;
+        width: 100px;
     &:hover {
         background-color: #777;
     }  
     }
-
-
 
     .vl {
         height: 16px;
@@ -262,10 +326,11 @@ header {
 
     .sign-in-desktop {
         color: var(--HEADER-COLOR);
-        margin: 0 2rem 0 -1rem;
+        margin: 0 1% 0 0;
         transition: color 0.2s linear 0.1s;
         font-size: 13px;
         font-weight: bold;
+        width: 50px;
     
     &:hover {
         color: red;
