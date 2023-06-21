@@ -210,6 +210,24 @@ p span:hover {
   top: 100px;
 }
 
+.pageNavigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.pageNavigation ul li {
+  color: white;
+  padding: 10px;
+  background: red;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  margin: 2px;
+}
+
 @media screen and (max-width: 412px) {
   .rooms {
     display: grid;
