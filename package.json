@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/becodeorg/hamilton-8-escapium-timcoll#readme",
   "dependencies": {
+
     "jquery": "^3.7.0"
   }
 }
