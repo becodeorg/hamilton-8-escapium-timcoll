@@ -834,5 +834,23 @@ nav section {
     color: red;
   }
 }
+@media screen and (min-width: 0px) and (max-width: 412px) {
+  #Latest_blog_post .container {
+    display: grid;
+    flex-direction: column;
+    margin: auto;
+  }
+  #Latest_blog_post .container li:first-child {
+    background-image: url("../resources/images/gallery/room-9.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vw;
+  }
+  #Latest_blog_post .container li:last-child {
+    background-color: #404040;
+    height: 45vw;
+  }
+}
 
 /*# sourceMappingURL=HomePage.css.map */

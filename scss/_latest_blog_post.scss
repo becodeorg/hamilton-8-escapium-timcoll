@@ -1,0 +1,29 @@
+@import "../scss/color";
+
+#Latest_blog_post {
+
+
+
+    @media screen and (min-width: 0px) and (max-width: 412px) {
+        & .container {
+            display: grid;
+            flex-direction: column;
+            margin: auto;
+            & li:first-child {
+                background-image: url("../resources/images/gallery/room-9.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                height: 50vw;
+            }
+            & li:last-child {
+                background-color: $backColor;
+                height: 45vw;
+            }
+        }
+    }
+    @media screen and (min-width: 412px) {
+
+    }
+
+}
