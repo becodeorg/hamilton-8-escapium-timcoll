@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/32aee59745.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>About</h1>
+        
+        <ul class="breadcumb">
+            <li>Escapium</li>
+            <li>></li>
+            <li>about</li>
+        </ul>
+    </header>
+    <main>
+        <section class="">
+            <h1>
+                How to play 
+            </h1>
+            <div class="how-to-play"> 
+                <section>
+                    <h2>Who should play</h2>
+                    <p>Escapium is perfect for everyone. There are no special skills needed to have a great time. Bring your friends, family, co-workers, just a bunch of random people and get fun</p>
+                </section>
+                <section>
+                    <h2>for Team building</h2>
+                    <p>Escapium is perfect for everyone. There are no special skills needed to have a great time. Bring your friends, family, co-workers, just a bunch of random people and get fun</p>
+                </section>
+                <section>
+                    <h2>For special event</h2>
+                    <p>Escapium is perfect for everyone. There are no special skills needed to have a great time. Bring your friends, family, co-workers, just a bunch of random people and get fun</p>
+                </section>
+            </div>
+        </section>
+        <section class="certification-container bg-black">
+             <div>
+                <h2 class="color-white">Certificate</h2>
+             </div>
+             <div class="certification-list">
+                <img src="../resources/images/gallery/certificate-1.jpg" alt="">
+                <img src="../resources/images/gallery/certificate-2.jpg" alt="">
+                <img src="../resources/images/gallery/certificate-3.jpg" alt="">
+                <img src="../resources/images/gallery/certificate-4.jpg" alt="">
+              
+             </div>
+        </section>
+
+       <section class="bg-dark">
+            <div class="small-line"></div>
+            <h2 class="members-title"> our Team </h2>
+            <section class="members">
+                <figure>
+                    <img src="../resources/images/gallery/member-photo-1.jpg" alt="">
+                    <figcaption>
+                        Stanley Hudson
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../resources/images/gallery/member-photo-2.jpg" alt="">
+                    <figcaption>
+                        Mona Sterling
+                    </figcaption>
+                </figure>
+                <figure>
+                <img src="../resources/images/gallery/member-photo-3.jpg" alt="">
+                    <figcaption>
+                        Trudy Campbell
+                    </figcaption>
+                </figure>
+            <section>
+        </section>
+    </section>
+
+ </section>
+ <section class="bg-dark">
+    <div>
+        <h2>What people say </h2>
+        <div class="subtitle-testimonial">read all Testimonials
+            <div class="line"></div>
+        </div>
+    </div>
+    <div  class="section-testimonial">
+        <div class="Testimonials">
+            <blockquote>My family and I had a spectacular experience here and they are above and beyond in customer service and entertainment.</blockquote>
+            <img src="../resources/images/avatars/comment-avatar-1.png" alt="">
+        </div>
+        <div class="Testimonials">
+            <blockquote>My family and I had a spectacular experience here and they are above and beyond in customer service and entertainment.</blockquote>
+            <img src="../resources/images/avatars/comment-avatar-2.png" alt="">
+        </div>
+    </div>
+    <div>
+     
+    </div>
+
+ </section>
+
+       <section >
+        <section class="center">
+            <h2>FAQ</h2>
+            <p>If your question isn’t answered here, feel free to contact us.</p>
+        </section>
+           
+            <section class="faq-container">
+            
+                
+                <div>
+                    <div class="question"> 
+                            <i class="fa-solid fa-plus"></i><span>Will I be locked a</span>
+                    </div>
+                    <p class="response">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Q</p>
+              
+                </div>
+      
+            </section>
+       </section>
+         
+    </main>
+    
+   <footer id="footer"></footer>
+    <script>
+            $('#footer').load('../footer/footer.html')
+    </script>
+      <script >
+        let question = document.querySelectorAll('.question');
+        //$('.response').hide();
+          
+     
+
+        $('.response').hide();
+
+       
+        $('.question').on('click',function()
+        {
+           
+            $(this).parent('div').find('p').slideToggle(function()
+            {
+                $('.response').not($(this)).hide();
+            });
+        
+        })
+
+   </script>
+</body>
+</html>
