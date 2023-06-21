@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escapium</title>
+    <link rel="stylesheet" href="./HomePage.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+   
+
+</head>
+<body>
+        <nav id="navbars"></nav>
+
+        <section id="section_homepage"></section>
+
+        <footer id="footer"></footer>
+
+        <script>
+            $(function() {
+                $("#navbars").load("./navbar/navbar.html")
+                $("#section_homepage").load("./home.html")
+                $("footer").load("./footer/footer.html")
+            })
+        </script>
+
+
+
+</body>
+</html>
