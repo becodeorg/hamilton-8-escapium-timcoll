@@ -1,0 +1,20 @@
+@mixin avatar_name {
+    background-image: url("../resources/images/gallery/room-9.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vw;
+}
+
+@mixin avatar_name2 {
+    padding-top: 35vw;
+    z-index: 2;
+        & img {
+            border-radius: 5vw;
+            width: 10vw;
+        }
+        & span {
+            color: $color-white;
+            font-size: 4vw;
+        }
+}

@@ -202,7 +202,7 @@
   #who_can_play ul li {
     padding: 10px;
     list-style-type: none;
-    font-size: larger;
+    font-size: 4vw;
     position: relative;
     bottom: 200px;
     z-index: 1;
@@ -840,7 +840,21 @@ nav section {
     flex-direction: column;
     margin: auto;
   }
-  #Latest_blog_post .container li:first-child {
+  #Latest_blog_post .container .avatar_name {
+    background-image: url("../resources/images/gallery/room-9.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vw;
+  }
+  #Latest_blog_post .container .avatar_name1 {
+    background-image: url("../resources/images/gallery/room-9.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vw;
+  }
+  #Latest_blog_post .container .avatar_name2 {
     background-image: url("../resources/images/gallery/room-9.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -850,6 +864,53 @@ nav section {
   #Latest_blog_post .container li:last-child {
     background-color: #404040;
     height: 45vw;
+    padding: 10vw;
+  }
+  #Latest_blog_post .container li:last-child p {
+    font-size: 4vw;
+    color: #aaaaaa;
+  }
+  #Latest_blog_post .container li:last-child h3 {
+    padding-top: 3vw;
+    padding-bottom: 4vw;
+    font-size: 5vw;
+    color: #fff;
+  }
+  #Latest_blog_post .container .avatar_name {
+    padding-top: 35vw;
+    z-index: 2;
+  }
+  #Latest_blog_post .container .avatar_name img {
+    border-radius: 5vw;
+    width: 10vw;
+  }
+  #Latest_blog_post .container .avatar_name span {
+    color: #fff;
+    font-size: 4vw;
+  }
+  #Latest_blog_post .container .avatar_name1 {
+    padding-top: 35vw;
+    z-index: 2;
+  }
+  #Latest_blog_post .container .avatar_name1 img {
+    border-radius: 5vw;
+    width: 10vw;
+  }
+  #Latest_blog_post .container .avatar_name1 span {
+    color: #fff;
+    font-size: 4vw;
+  }
+  #Latest_blog_post .container .avatar_name2 {
+    padding-top: 35vw;
+    z-index: 2;
+  }
+  #Latest_blog_post .container .avatar_name2 img {
+    border-radius: 5vw;
+    width: 10vw;
+  }
+  #Latest_blog_post .container .avatar_name2 span {
+    color: #fff;
+    font-size: 4vw;
   }
 }
 

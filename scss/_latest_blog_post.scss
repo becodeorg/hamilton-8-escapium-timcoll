@@ -1,4 +1,5 @@
 @import "../scss/color";
+@import "../scss/mixin";
 
 #Latest_blog_post {
 
@@ -9,21 +10,49 @@
             display: grid;
             flex-direction: column;
             margin: auto;
-            & li:first-child {
-                background-image: url("../resources/images/gallery/room-9.jpg");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                height: 50vw;
+            & .avatar_name {
+               @include avatar_name;
+
+            }
+            & .avatar_name1 {
+                @include avatar_name;
+
+            }
+            & .avatar_name2 {
+                @include avatar_name;
+
             }
             & li:last-child {
                 background-color: $backColor;
                 height: 45vw;
+                padding: 10vw;
+                & p {
+                   font-size: 4vw;
+                   color: $color-txt
+                }
+                & h3 {
+                    padding-top: 3vw;
+                    padding-bottom: 4vw;
+                    font-size: 5vw;
+                    color: $color-white
+                }
+            }
+            & .avatar_name {
+                
+               @include avatar_name2;
+            }
+            & .avatar_name1 {
+                
+               @include avatar_name2;
+            }
+            & .avatar_name2 {
+              
+                @include avatar_name2;
             }
         }
     }
     @media screen and (min-width: 412px) {
-
+        
     }
 
 }
