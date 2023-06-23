@@ -1,5 +1,4 @@
 @mixin avatar_name {
-    background-image: url("../resources/images/gallery/room-9.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -17,4 +16,16 @@
             color: $color-white;
             font-size: 4vw;
         }
+}
+@mixin avatar_name2_destop  {
+    padding-top: 10vw;
+    padding-left: 2vw;
+    & img {
+        border-radius: 5vw;
+        width: 3vw;
+    }
+    & span {
+        color: $color-white;
+        font-size: 1.4vw;
+    }
 }

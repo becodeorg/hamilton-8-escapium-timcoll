@@ -3,23 +3,50 @@
 
 #Latest_blog_post {
 
+background-color: $bakcgrounColor;
 
+
+    & ul > li {
+        list-style-type: none;
+    }
 
     @media screen and (min-width: 0px) and (max-width: 412px) {
+        
+        & h2 {
+            text-align: center;
+            padding-top: 4vw;
+            font-size: 7vw;
+            color: $color-white;
+        }
+        & a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2vw;
+            text-decoration: none;
+            color: red;
+            text-decoration-line: underline;
+            font-size: 3vw;
+            padding-bottom: 2vw;
+        }
+
         & .container {
             display: grid;
             flex-direction: column;
             margin: auto;
             & .avatar_name {
                @include avatar_name;
+               background-image: url("../resources/images/gallery/room-9.jpg");
 
             }
             & .avatar_name1 {
                 @include avatar_name;
+                background-image: url("../resources/images/gallery/room-7.jpg");
 
             }
             & .avatar_name2 {
                 @include avatar_name;
+                background-image: url("../resources/images/gallery/post-img-2.jpg");
 
             }
             & li:last-child {
@@ -28,7 +55,7 @@
                 padding: 10vw;
                 & p {
                    font-size: 4vw;
-                   color: $color-txt
+                   color: $color-txt;
                 }
                 & h3 {
                     padding-top: 3vw;
@@ -52,7 +79,85 @@
         }
     }
     @media screen and (min-width: 412px) {
-        
+    
+        & h2 {
+            text-align: center;
+            padding-top: 2vw;
+            font-size: 3vw;
+            color: $color-white;
+        }
+        & a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 1vw;
+            text-decoration: none;
+            color: red;
+            text-decoration-line: underline;
+            font-size: 1.2vw;
+        }
+
+
+    & .latest_container {
+        padding: 8vw 0vw 8vw 0vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        & .container {
+             display: flex;
+             flex-direction: column;
+             & .avatar_name {
+                 @include avatar_name;
+                 height: 15vw;
+                 width: 25vw;
+                 background-image: url("../resources/images/gallery/room-9.jpg");
+                 margin-right: 2vw;
+             }
+             & .avatar_name1 {
+                @include avatar_name;
+                height: 15vw;
+                width: 25vw;
+                background-image: url("../resources/images/gallery/room-7.jpg");
+                margin-right: 2vw;
+            }
+            & .avatar_name2 {
+                @include avatar_name;
+                height: 15vw;
+                width: 25vw;
+                background-image: url("../resources/images/gallery/post-img-2.jpg");
+                margin-right: 2vw;
+            }
+            & .avatar_name {
+               @include avatar_name2_destop;
+            }
+            & .avatar_name1 {
+                @include avatar_name2_destop;
+            }
+            & .avatar_name2 {
+                @include avatar_name2_destop;
+            }
+
+            & li:last-child {
+                background-color: $backColor;
+                width: 25vw;
+                height: 14vw;
+                padding: 2vw;
+                
+                & p {
+                    color: $color-txt;
+                    font-size: 1vw;
+                 }
+                 & h3 {
+                     color: $color-white;
+                     padding-top: 1vw;
+                     padding-bottom: 1vw;
+                     font-size: 1.5vw;
+                 }
+            }
+
+        }
     }
 
 }
