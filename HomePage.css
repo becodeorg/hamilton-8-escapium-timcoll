@@ -1047,4 +1047,39 @@ nav section {
   }
 }
 
+#Testimonials {
+  text-align: center;
+  padding: 8vw;
+}
+#Testimonials h2 {
+  padding-bottom: 4vw;
+}
+#Testimonials ul > li {
+  list-style-type: none;
+}
+#Testimonials div {
+  display: flex;
+  justify-content: center;
+}
+#Testimonials div ul:first-child li {
+  padding: 2vw;
+}
+#Testimonials div .TIFFANY {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#Testimonials ul:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Testimonials ul:last-child li {
+  margin: 2vw;
+}
+#Testimonials ul > li > p {
+  width: 30vw;
+  word-wrap: break-word;
+}
+
 /*# sourceMappingURL=HomePage.css.map */
