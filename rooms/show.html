@@ -35,11 +35,18 @@
         </div>
         <div>
             <h2>Booking form </h2>
-            <i class="fa-solid fa-arrow-left" style="color: #ffffff;" id="avant"></i>
-            <i class="fa-solid fa-arrow-right" style="color: #ffffff;" id="apres"></i>
-
+            <i class="fa-solid fa-arrow-left"  id="avant"></i>
+            <div id="month"></div>
+            <i class="fa-solid fa-arrow-right"  id="apres"></i>
             <div class="calendar">
-                <div class="cases"></div>
+                <div class="days">lundi</div>
+                <div class="days">marddi</div>
+                <div class="days">mercredi</div>
+                <div class="days">jeudi</div>
+                <div class="days">vendredi</div>
+                <div class="days">samedi</div>
+                <div class="days">dimanche</div>
+                <div class="cases"></div>   
                 <div  class="cases"></div>
                 <div  class="cases" ></div>
                 <div  class="cases"></div>
@@ -216,9 +223,9 @@ $.getJSON('./rooms.json',function(data){
              });
     
   
-            $('#left').click(()=>{
+           /* $('#left').click(()=>{
              $('.other-room-items').style.translate ='140px';
-            })
+            })*/
 </script>
  <script>
     let cases = document.querySelectorAll('.cases')
@@ -254,25 +261,30 @@ $.getJSON('./rooms.json',function(data){
         }
     }
 
-    calendrier(year,month)
+    //calendrier(year,month)
+   
     document.querySelector('#avant').onclick = function()
     {
+        
         calendrier_reducer(DOWN_MONTH);
+        calendrier(year,month)
        
     }
    
     document.querySelector('#apres').onclick = function()
     {
         calendrier_reducer(UP_MONTH);
+        calendrier(year,month)
        
     }
 
 
     function calendrier(year,month){
+        
         const MONTH_NB =month+12*(year-2020)
-
+        document.querySelector('#month').innerHTML = monthName[month-1]+ year
         let cld = [{dayStart:2,length:31,year:2020, month:"janvier"}]
-
+           
         for(let i=0;i<MONTH_NB-1;i++)
          {
             let yearSimule = 2020+Math.floor(i/12);
@@ -285,8 +297,8 @@ $.getJSON('./rooms.json',function(data){
                 month:monthName[monthSimuleIndex]
 
             }
+           
             
-        console.log(cld);
             if(cld[i+1].month === undefined)
             {
                 cld[i+1].month = "janvier";
@@ -299,11 +311,48 @@ $.getJSON('./rooms.json',function(data){
             cases[i].innerText = "";
         }
 
+
+
         for(i = 0;i-1<cld[cld.length-1].length;i++)
         {
-            cases[i-1+cld[cld.length-1].dayStart].innerHTML = i;
-        
+                   
+                    if(i===day)
+                    {
+                        cases[i-1+cld[cld.length-1].dayStart].style.background='red';
+                        
+                    }
+         
+           /* if( monthName[month-1] == monthName[i])
+            {
+                */
+                //console.log('test'+i);
+                if (day == i )
+                {
+                    console.log(month)
+                   /* if(6 === 6)
+                    {
+                        
+                        cases[i-1+cld[cld.length-1].dayStart].style.background='red';
+                    }*/
+                   
+                }
+          //  }
+
+
+
+
+           /* if(day == i && monthName[month-1] == monthName[i])
+          {
            
+            //console.log(monthName[i] == monthName[month-1])
+            cases[i-1+cld[cld.length-1].dayStart].style.background='red';
+          }*/
+            if(i>0)
+            {
+                cases[i-1+cld[cld.length-1].dayStart].innerHTML = i
+            }
+            
+
         }
 
     }
@@ -318,7 +367,6 @@ $.getJSON('./rooms.json',function(data){
             return 28
         }
     }
-    console.log(month)
     calendrier(year,month)
     
 
