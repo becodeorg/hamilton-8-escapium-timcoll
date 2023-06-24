@@ -28,6 +28,7 @@
             </h1>
             <div class="how-to-play"> 
                 <section>
+                   
                     <h2>Who should play</h2>
                     <p>Escapium is perfect for everyone. There are no special skills needed to have a great time. Bring your friends, family, co-workers, just a bunch of random people and get fun</p>
                 </section>
@@ -36,6 +37,8 @@
                     <p>Escapium is perfect for everyone. There are no special skills needed to have a great time. Bring your friends, family, co-workers, just a bunch of random people and get fun</p>
                 </section>
                 <section>
+                    <i class="fa-solid fa-medal icons-size"></i>
+                    <div class="line-oblique">line</div>
                     <h2>For special event</h2>
                     <p>Escapium is perfect for everyone. There are no special skills needed to have a great time. Bring your friends, family, co-workers, just a bunch of random people and get fun</p>
                 </section>
@@ -98,18 +101,18 @@
             <img src="../resources/images/avatars/comment-avatar-2.png" alt="">
         </div>
     </div>
-    <div>
-     
+    <div class="arrow">
+        <i class="fa-solid fa-arrow-left cliclkleft"></i><i class="fa-solid fa-arrow-right"></i>
     </div>
 
  </section>
 
        <section >
-        <section class="center">
-            <h2>FAQ</h2>
-            <p>If your question isn’t answered here, feel free to contact us.</p>
-        </section>
-           
+            <section class="center">
+                <h2>FAQ</h2>
+                <p>If your question isn’t answered here, feel free to contact us.</p>
+            </section>
+            
             <section class="faq-container">
             
                 
@@ -148,6 +151,18 @@
             });
         
         })
+          $( ".cliclkleft" ).on( "click", function() {
+            let tetstimoniale_length = $('.Testimonials');
+            for(items of tetstimoniale_length)
+            {
+                items.style.position = 'relative';
+                items.style.left = '12px';
+            }
+        } );
+
+
+      
+
 
    </script>
 </body>

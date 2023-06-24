@@ -161,3 +161,25 @@ blockquote{
 
 }
 
+.icons-size{
+    font-size: 4rem;
+    border: 1px solid black;
+    padding: 4%;
+    border-radius: 50%;
+}
+
+
+.line-oblique{
+    height: 3px solid black;
+    width: 140px;
+    background-color: red;
+    transform: rotate(-45deg);
+    position: relative;
+    z-index: -1;
+    top:-30px
+}
+
+.arrow{
+    color: white;
+    font-size: 2rem ;
+}
