@@ -1,0 +1,44 @@
+
+
+#Testimonials {
+    text-align: center;
+    padding: 8vw;
+
+    & h2 {
+        padding-bottom: 4vw;
+    }
+
+    & ul > li {
+        list-style-type: none;
+    }
+
+    & div {
+        display: flex;
+        justify-content: center;
+
+        & ul:first-child {
+            & li {
+                padding: 2vw;
+            }          
+        }
+        & .TIFFANY {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+    }
+
+    & ul:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+         & li {
+            margin: 2vw;
+         }
+    }
+
+    & ul > li > p {
+        width: 30vw;
+        word-wrap: break-word;
+    }
+}

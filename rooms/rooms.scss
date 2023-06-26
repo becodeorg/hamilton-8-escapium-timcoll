@@ -1,0 +1,108 @@
+
+.tags {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    & a {
+        margin:12px;
+        padding: 20px;
+        color: white;
+        background: black;
+        border-radius: 15px;
+        text-decoration: none;
+        transition: all 1s ease-in-out;
+        &:hover{
+            background: orangered;
+        }
+    }
+}
+
+.rooms{
+    display: grid ;
+    grid-template-columns: auto auto auto auto ;
+    justify-content: center ;
+    gap: 20px;
+    padding: 40px;
+    //justify-content: space-around;
+}
+.articles{
+    width: 200px;
+    height: 300px;
+   
+    padding: 20px;
+    //background-size: cover;
+
+}
+.positionnement{
+    position: relative;
+    top : 200px;
+}
+
+.test{
+    position: relative;
+    top:200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.test1{
+    position: relative;
+    top: 100px;
+}
+
+
+.pageNavigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    & li{
+        color: white;
+        padding: 10px;
+        background: red;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        text-align: center;
+        margin: 2px;
+    }
+}
+
+
+//412px - mobile
+// 768 - tablette
+// 768 et + desktop
+@media screen and (max-width : 412px)
+{
+    .rooms{
+        display: grid ;
+        grid-template-columns: auto   ;
+        justify-content: center ;
+        gap: 20px;
+    }
+}
+@media screen and (min-width : 412px) and  (max-width : 768px) 
+{
+
+    .rooms{
+        display: grid ;
+        grid-template-columns: auto auto  ;
+        justify-content: center ;
+        gap: 20px;
+    }
+
+}
+@media screen and (min-width : 768px) and  (max-width : 1200px) 
+{
+
+    .rooms{
+        display: grid ;
+        grid-template-columns: auto auto auto ;
+        justify-content: center ;
+        gap: 20px;
+    }
+
+}
+

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/32aee59745.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section class="bg-black">
+        <section class="tags">
+            <a href="#">All</a>
+            <a href="#">Easy</a>
+            <a href="#">Normal</a>
+            <a href="#">Hard</a>
+        </section>
+        <section class="rooms">
+
+        </section>
+        <section>
+            <nav class="pageNavigation">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </nav>
+        </section>
+
+    </section>
+    
+    <footer id="footer"></footer>
+    <script>
+        $('#footer').load('../footer/footer.html')
+</script>
+<script>
+$.getJSON('./rooms.json',function(data){
+                for (items of data)
+                {
+                    let div = document.createElement('div');
+                    div.style.background='url('+items.photos[0]+')';
+                    div.classList.add('articles')
+                    document.querySelector('.rooms').appendChild(div)
+                    let headding_one = document.createElement('h1');
+                    headding_one.innerText = items.name
+                    headding_one.style.color = 'white';
+                    headding_one.classList.add('positionnement');
+                    div.appendChild(headding_one);
+                    let div_info = document.createElement('div');
+                    div_info.classList.add('test')
+                    //div_info.classList.add('test1')
+                    let icon_user =document.createElement('i');
+                    icon_user.innerHTML = '<i class="fa-solid fa-user" style="color: #ffffff;"></i>  ';
+                    let span = document.createElement('span');
+                    span.innerHTML = items.players
+                    div.appendChild(div_info);
+                    div_info.appendChild(icon_user)
+                    div_info.appendChild(span)
+                    let icon_clock =document.createElement('i');
+                    icon_clock.innerHTML ='<i class="fa-solid fa-clock" style="color: #ffffff;"></i>';
+                    let span_clock = document.createElement('span');
+                    span_clock.innerHTML = items.minutes
+                    div_info.appendChild(icon_clock)
+                    div_info.appendChild(span_clock)
+                    let icon_location =document.createElement('i');
+                    icon_location.innerHTML ='<i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>';
+                   
+                    let span_location = document.createElement('span');
+                    span_location.innerHTML = items.location
+                    div_info.appendChild(icon_location);
+                    div_info.appendChild(span_location);
+                    
+
+
+                    
+                   for(let i =0;i < items.difficulty;i++)
+                   {
+                        let stars = document.createElement('i');
+                        stars.innerHTML = '<i class="fa-solid fa-star" style="color: #e01b24;"></i>';
+                        stars.classList.add('test1');
+                        //stars.style.position='relative';
+                        div.setAttribute('dificulty',items.difficulty)
+                        div.append(stars)
+                      
+                   }
+
+                   for(let i =items.difficulty;i < 5;i++)
+                   {
+                        let stars = document.createElement('i');
+                        stars.innerHTML = '<i class="fa-regular fa-star"></i>';
+                        stars.classList.add('test1');
+                        div.append(stars)
+                   } 
+                   
+                   
+
+
+
+
+
+
+
+                }
+             })
+
+
+
+
+            
+            let tags = document.querySelectorAll('.tags a');
+
+for(elements of tags)
+{
+   elements.onclick = function(e)
+   { 
+        let element = e.currentTarget;
+      
+       
+
+       let value = e.currentTarget.innerHTML;
+       let articles =document.querySelectorAll('.articles');
+      
+       switch (value) {
+       case 'All':
+       for (items of articles)
+            {
+                items.style.display = 'block';
+                
+            }
+           
+           break;
+       case 'Easy':
+            
+            for (items of articles)
+            {
+                
+                if (items.getAttribute('dificulty')>2){
+                    items.style.display = 'none';
+                }else{
+                    items.style.display = 'block';
+                }
+            }
+           
+           
+           break;
+       case 'Normal':
+            for (items of articles)
+            {
+                if (items.getAttribute('dificulty')<3){
+                    items.style.display = 'none';
+                }
+                else{
+                    items.style.display = 'block';
+                }
+            }
+            break;
+       case 'Hard' :
+       for (items of articles)
+            {
+                if (items.getAttribute('dificulty')<4){
+                    items.style.display = 'none';
+                }
+                else{
+                    items.style.display = 'block';
+                }
+            }
+            break;
+           break;
+
+       }   
+      
+   }
+}
+
+
+             
+            
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/67e16e4a4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./nav.css">
+  
+</head>
+<body>
+  <header>
+    <nav>
+        <figure>
+            <img src="./IMG-Navbar/logo.png" alt="">
+        </figure>
+
+        <div class="navbar" id="menu">
+            <a href="#home">home</a>
+
+            <a href="#About">about</a>
+
+            <div class="subnav">
+              <button class="subnavbtn">features<i class="fa-regular fa-plus" style="color: #808080;"></i></button>
+              
+              <div class="subnav-content">
+                <a href="">Shortcodes</a>
+                <a href="">Typography</a>
+                <a href="">404 Error</a>
+                <a href="">FAQs</a>
+              </div>
+            </div>
+            <div class="subnav">
+              <button class="subnavbtn">rooms<i class="fa-regular fa-plus" style="color: #808080;"></i></button>
+              
+              <div class="subnav-content">
+                <a href="">Rooms - List</a>
+                <a href="">Rooms - Grid</a>
+                <a href="">Rooms - Modern</a>
+                <a href="">Rooms - Blocks</a>
+                <a href="">Single Room</a>
+              </div>
+            </div>
+            <div class="subnav">
+              <button class="subnavbtn">booking<i class="fa-regular fa-plus" style="color: #808080;"></i></button>
+              
+              <div class="subnav-content">
+                <a href="">Form</a>
+                <a href="">Login</a>
+                <a href="">Profile</a>
+                <a href="">Appointments</a>
+              </div>
+            </div>
+            <div class="subnav">
+              <button class="subnavbtn">blog<i class="fa-regular fa-plus" style="color: #808080;"></i></button>
+              
+              <div class="subnav-content">
+                <a href="">Left Sidebar</a>
+                <a href="">Right Sidebar</a>
+                <a href="">Fullwidth</a>
+              </div>
+            </div>
+            <a href="#contact">Contact</a>
+
+            <div class="sign-in-mobile">
+                <a href=""><i class="fa-regular fa-user-mobile" style="color: #fff;"></i>Sign In</a>
+            </div>
+        </div>
+
+        <section>
+            <div class="book-now">Book Now!</div>
+
+            <i class="fa-regular fa-calendar" style="color: #c3c3c3;"></i>
+            <i class="fa-solid fa-magnifying-glass";></i>            
+            <div class="vl"></div>
+            <i class="fa-regular fa-user" style="color: #c3c3c3;"></i>
+            <i class="fa-solid fa-bars" id="menuButton" style="color: #c3c3c3;"></i>  
+            <div class="sign-in-desktop">SIGN IN</div>    
+        </section>
+    </nav>
+    <script>
+      /* Selectionner le bouton menu et l'élément navbar */
+      const menuButton = document.getElementById("menuButton");
+      const menu = document.getElementById("menu");
+      menuButton.addEventListener('click', function () {
+          menu.classList.toggle("menu-open");
+      }) ;
+  </script>
+  </header>  
+
+</body>
+</html>
