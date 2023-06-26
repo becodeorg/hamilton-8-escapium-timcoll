@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/32aee59745.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <header  style="height: 60vh;">
+        <h1 class="color-white heading" ></h1>
+        <div class="container-line">
+            
+        </div>
+    </header>
+    <main>
+        <div class="grille-container position-fixe">
+            <div>
+                <div class="grille-container">
+                    <div class="grille-container-items " id="difficulty-items"></div>
+                    <div class="grille-container-items middle " id ='players'></i></div>
+                    <div class="grille-container-items " id="time"></div>
+                </div>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, beatae. Dolorum dolores officia explicabo blanditiis, delectus, sed deleniti quos dignissimos voluptates similique tempora dolor soluta qui sit odit provident ullam.</div>
+            </div>
+            <ul class="container">
+                <li id="phone" class="d-flex-start"></li>
+                <li id="mail" ></li>
+                <li id="skype"></li>
+                <li id="location"></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Booking form </h2>
+            <i class="fa-solid fa-arrow-left"  id="avant"></i>
+            <div id="month"></div>
+            <i class="fa-solid fa-arrow-right"  id="apres"></i>
+            <div class="calendar">
+                <div class="days">lundi</div>
+                <div class="days">marddi</div>
+                <div class="days">mercredi</div>
+                <div class="days">jeudi</div>
+                <div class="days">vendredi</div>
+                <div class="days">samedi</div>
+                <div class="days">dimanche</div>
+                <div class="cases"></div>   
+                <div  class="cases"></div>
+                <div  class="cases" ></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"> </div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div  class="cases"></div>
+                <div class="cases"></div>
+                <div class="cases"></div>
+                <div class="cases"></div>
+                <div class="cases"></div>
+                <div class="cases"></div>
+                <div class="cases"></div>
+            </div>
+        </div>
+        <section>
+            <h2>Other Rooms</h2>
+            <div><i  id='left'class="fa-solid fa-arrow-left"></i><i id="left" class="fa-solid fa-arrow-right"></i></div>
+            <div id="otherRooms">
+
+            </div>
+        </section>
+    </main>
+    <footer id="footer"></footer>
+    <script>
+        $('#footer').load('../footer/footer.html')
+</script>
+
+
+<script>
+    const postname =(new URLSearchParams(window.location.search)).get('name');
+  
+    let itemsData ;
+    var numberDifficulty 
+    let card;
+    $.getJSON('./rooms.json',function(data)
+    {
+       
+        for(items of data)
+        {
+            if(items.name == postname){
+                card = items;
+                    numberDifficulty =items.difficulty;
+                    console.log(numberDifficulty)
+                    document.querySelector('h1').innerHTML=items.name;
+                    document.querySelector('header').style.backgroundImage ='url('+items.photos[0]+')';
+                    $('#players').html('<i class="fa-solid fa-users icon">'+items.players[0]+'-'+items.players[1] +'<br><br>Players'); 
+                    $('#time').html('<i class="fa-regular fa-clock"></i>'+items.minutes+ '<br><br>Minutes'); 
+                    console.log(card)
+                    $('#phone').html('<i class="fa-solid fa-phone icon"></i>'+items.phone)
+                    $('#mail').html('<i class="fa-solid fa-envelope icon"></i>'+items.email)
+                    $('#skype').html('<i class="fa-brands fa-skype icon"></i>'+items.skype)
+                    $('#location').html('<i class="fa-solid fa-location-dot icon" ></i>'+items.location)
+                    
+                    for (photo of items.photos)
+                    {
+                        let div = document.createElement('div');
+                        div.setAttribute('data-source',photo)
+                        div.classList.add("line-white")
+                        document.querySelector('.container-line').appendChild(div);
+                        div.onclick = function()
+                        {
+                            let photolink = div.getAttribute('data-source');
+
+                            document.querySelector('header').style.backgroundImage ='url('+photolink+')';
+                        }
+                        
+                    }
+
+                   
+                   for(let i =0;i < items.difficulty;i++)
+                   {
+                       
+                    let stars = document.createElement('i');
+                        
+                        stars.innerHTML = '<i class="fa-solid fa-star" style="color: #e01b24;"></i>';
+
+                       $('#difficulty-items').append(stars);
+                           
+                   }
+
+                   for(let i =items.difficulty;i < 5;i++)
+                   {
+                        let stars = document.createElement('i');
+                        
+                        stars.innerHTML = '<i class="fa-regular fa-star"></i>';
+                        $('#difficulty-items').append(stars);
+                        
+                   } 
+                   $('#difficulty-items').append("<div><br>difficulty</div>");
+   
+
+
+
+                   break;
+                }
+            }
+
+            
+        }
+    )
+    
+
+    
+
+
+$.getJSON('./rooms.json',function(data){
+    let name  =(new URLSearchParams(window.location.search)).get('name');
+   
+                for (items of data)
+                {
+                if (items.name == name)
+                {
+                    let div = document.createElement('div');
+                    div.style.background='url('+items.photos[0]+') no-repeat';
+                    div.style.height = '350px';
+                    div.style.width = '350px';
+                    div.style.margin ='10px';
+                    div.style.display ='inline-block';
+                    div.classList.add('other-room-items')
+                    //document.querySelector('#otherRooms').classList.add('d-flex');
+                    document.querySelector('#otherRooms').appendChild(div)
+                    div.classList.add('other')
+                    document.querySelector('#otherRooms').appendChild(div)
+                    let headding_one = document.createElement('h2');
+                    headding_one.innerText = items.name
+                    headding_one.style.color = 'white';
+                    headding_one.classList.add('positionnement');
+                    div.appendChild(headding_one);
+                    let div_info = document.createElement('div');
+                    div_info.classList.add('test')
+                    let icon_user =document.createElement('i');
+                    icon_user.innerHTML = '<i class="fa-solid fa-user" style="color: #ffffff;"></i>  ';
+                    let span = document.createElement('span');
+                    span.innerHTML = items.players
+                    div.appendChild(div_info);
+                    div_info.appendChild(icon_user)
+                    div_info.appendChild(span)
+                    let icon_clock =document.createElement('i');
+                    icon_clock.innerHTML ='<i class="fa-solid fa-clock" style="color: #ffffff;"></i>';
+                    let span_clock = document.createElement('span');
+                    span_clock.innerHTML = items.minutes;
+                    div_info.appendChild(icon_clock)
+                    div_info.appendChild(span_clock)
+                    let icon_location =document.createElement('i');
+                    icon_location.innerHTML ='<i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>';
+                   
+                    let span_location = document.createElement('span');
+                    span_location.innerHTML = items.location
+                    div_info.appendChild(icon_location);
+                    div_info.appendChild(span_location);
+                }
+
+                   
+                }
+             });
+    
+  
+           /* $('#left').click(()=>{
+             $('.other-room-items').style.translate ='140px';
+            })*/
+</script>
+ <script>
+    let cases = document.querySelectorAll('.cases')
+    let date = new Date();
+    let year = date.getFullYear();
+    let month = date.getMonth()+1; 
+    let month_current = month;
+    let day = date.getDate();
+    const  monthName=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+    const UP_MONTH = 'upMonth';
+    const DOWN_MONTH = 'downMonth';
+
+    function calendrier_reducer(action)
+    {
+     
+        switch(action)
+        {
+            case UP_MONTH:
+                if (month<12) month++
+                else
+                {
+                    year++
+                    month = 1
+                }
+                break;
+            case DOWN_MONTH:
+                if(month>0) month--
+                else
+                {
+                    year--
+                    month = 12
+                }
+                break;
+        }
+    }
+
+    //calendrier(year,month)
+   
+    document.querySelector('#avant').onclick = function()
+    {
+        
+        calendrier_reducer(DOWN_MONTH);
+        calendrier(year,month)
+       
+    }
+   
+    document.querySelector('#apres').onclick = function()
+    {
+        calendrier_reducer(UP_MONTH);
+        calendrier(year,month)
+       
+    }
+
+
+    function calendrier(year,month){
+        
+        const MONTH_NB =month+12*(year-2020)
+        document.querySelector('#month').innerHTML = monthName[month-1]+' '+ year
+        let cld = [{dayStart:2,length:31,year:2020, month:"janvier"}]
+        let  monthTest;
+        for(let i=0;i<MONTH_NB-1;i++)
+         {
+            let yearSimule = 2020+Math.floor(i/12);
+            const monthSimuleLongueur= [31,getFevrierLength(yearSimule),31,30,31,30,31,31,30,31,30,31]
+            let monthSimuleIndex = (i+1)-(yearSimule-2020)*12;
+            
+            
+            cld [i+1]={
+                dayStart :(cld[i].dayStart+monthSimuleLongueur[monthSimuleIndex-1])%7,
+                length: monthSimuleLongueur[monthSimuleIndex],  
+                year : 2020 +Math.floor((i+1)/12),
+                month:monthName[monthSimuleIndex]
+
+            }
+           
+            
+            if(cld[i+1].month === undefined)
+            {
+                cld[i+1].month = "janvier";
+                cld[i+1].length = 31;
+            }
+        }
+
+        for(i = 0;i<cases.length;i++)
+        {
+            cases[i].innerText = "";
+        }
+
+
+
+
+        for(i = 0;i-1<cld[cld.length-1].length;i++)
+        {
+           
+            let mois =document.querySelector('#month').innerHTML;
+            chiffre =mois.indexOf(2)
+      let mois_current  = mois.substring(0,chiffre-1)
+      let mois_curent_index;
+      for (let i = 0;i<monthName.length;i++)
+      {
+       
+        if(monthName[i]=== mois_current)
+        {
+            mois_curent_index = i;
+            break;
+            //console.log(mois_curent_index)
+        }
+      }
+    
+        if( month_current==(parseInt(mois_curent_index)+1))
+                  {
+                      
+                        if(i===day)
+                        {
+                            cases[i-1+cld[cld.length-1].dayStart].style.background='red';
+                        
+                        }
+                    }else{
+                        cases[i].style.background='dimgray';
+                    
+                    }
+                       
+                   
+            if(i>0)
+            {
+                
+                cases[i-1+cld[cld.length-1].dayStart].innerHTML = i
+            }
+            
+
+        }
+
+    }
+
+
+  
+    function getFevrierLength(year)
+    {
+        if (year%4 === 0){
+            return 29
+        }else{
+            return 28
+        }
+    }
+    calendrier(year,month)
+    
+
+ </script>
+
+</body>
+</html>

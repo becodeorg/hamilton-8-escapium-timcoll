@@ -42,7 +42,13 @@ $.getJSON('./rooms.json',function(data){
                     let div = document.createElement('div');
                     div.style.background='url('+items.photos[0]+')';
                     div.classList.add('articles')
-                    document.querySelector('.rooms').appendChild(div)
+                    let a = document.createElement('a');
+                    a.setAttribute('href','show.html?name='+items.name)
+                    document.querySelector('.rooms').appendChild(a)
+                    //document.querySelector('.rooms').appendChild(div)
+                    a.style.textDecoration='none';
+                    a.style.color='white';
+                    a.appendChild(div)
                     let headding_one = document.createElement('h1');
                     headding_one.innerText = items.name
                     headding_one.style.color = 'white';
