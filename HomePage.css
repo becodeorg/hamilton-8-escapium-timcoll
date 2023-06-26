@@ -1082,4 +1082,128 @@ nav section {
   word-wrap: break-word;
 }
 
+#about {
+  /*.response{
+      visibility: hidden;
+  }*/
+}
+#about .bg-dark {
+  background: black;
+}
+#about header {
+  position: relative;
+}
+#about header {
+  background: url("../resources/images/gallery/slide-1.jpg") no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+#about header h1 {
+  position: relative;
+  color: white;
+  font-size: 3rem;
+}
+#about header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#about .breadcumb {
+  color: white;
+  position: relative;
+  top: 50px;
+  left: -160px;
+  font-size: 2vw;
+  display: flex;
+  justify-content: center;
+}
+#about .how-to-play {
+  display: flex;
+  justify-content: center;
+}
+#about .members {
+  display: flex;
+  justify-content: space-around;
+}
+#about .members figcaption {
+  font-size: 2rem;
+  color: white;
+}
+#about .members img {
+  filter: grayscale(70%);
+  transition: all 0.1s ease-in-out;
+  width: 100%;
+  border: 7px solid black;
+}
+#about .members img:hover {
+  border: 7px solid red;
+  filter: grayscale(0%);
+}
+#about .members-title {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 50px;
+}
+#about .center {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#about .certification-list {
+  display: flex;
+  justify-content: space-around;
+}
+#about .certification-list img {
+  width: 100%;
+}
+#about .Testimonials img {
+  /*width: 10%;*/
+  position: relative;
+  left: 30%;
+}
+#about .line {
+  height: 2px;
+  width: 100%;
+  margin: auto;
+}
+#about .subtitle-testimonial {
+  color: red;
+  width: 10%;
+  margin: auto;
+  overflow: hidden;
+  border: 2px solid green;
+  text-align: center;
+  padding: 10px;
+}
+#about .subtitle-testimonial:hover .line {
+  transition: all 1s ease-in-out;
+  transform: translate(200px);
+}
+#about .section-testimonial {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+#about blockquote {
+  color: white;
+}
+#about .faq-container div:first-of-type {
+  text-align: center;
+  margin: 30px;
+  padding: 30px;
+  font-size: 2rem;
+}
+#about .question span:hover {
+  color: red;
+}
+@media screen and (min-width: 412px) and (max-width: 768px) {
+  #about .certification-list, #about .members {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
 /*# sourceMappingURL=HomePage.css.map */
