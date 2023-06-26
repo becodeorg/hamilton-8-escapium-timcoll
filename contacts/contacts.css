@@ -66,6 +66,8 @@ header {
     color: var(--GLOBAL_FONT);
 }
 
+
+
 @media only screen and (max-width: 412px) {
     .page-heading__title {
         font-size: var(--MOBILE_H2);
