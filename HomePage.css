@@ -1206,4 +1206,196 @@ nav section {
   }
 }
 
+.heading {
+  position: relative;
+  font-size: 4rem;
+  top: 250px;
+  left: 40px;
+}
+
+.line-white {
+  height: 4px;
+  width: 40px;
+  background: white;
+  margin: 10px;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+.line-white:hover {
+  width: 80px;
+}
+
+.container-line {
+  position: relative;
+  width: 50px;
+  left: 95%;
+}
+
+.container {
+  list-style: none;
+  padding: 0;
+}
+.container li {
+  padding: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.grille-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.grille-container-items {
+  padding: 20px;
+  text-align: center;
+}
+
+.position-fixe {
+  width: 1000px;
+  margin: auto;
+}
+
+.d-flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.other {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  padding: 20px;
+  margin: 15px;
+}
+
+#otherRooms {
+  border: 2px solid red;
+  width: 1000px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.calendar {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar div {
+  height: 100px;
+  width: 100px;
+  background-color: dimgray;
+  color: white;
+  border: 1px solid gray;
+}
+
+.middle {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+}
+.tags a {
+  margin: 12px;
+  padding: 20px;
+  color: white;
+  background: black;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: all 1s ease-in-out;
+}
+.tags a:hover {
+  background: orangered;
+}
+
+.rooms {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.articles {
+  width: 200px;
+  height: 300px;
+  padding: 20px;
+}
+
+.positionnement {
+  position: relative;
+  top: 200px;
+}
+
+.test {
+  position: relative;
+  top: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.test1 {
+  position: relative;
+  top: 100px;
+}
+
+.pageNavigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.pageNavigation ul li {
+  color: white;
+  padding: 10px;
+  background: red;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  margin: 2px;
+}
+
+@media screen and (max-width: 412px) {
+  .rooms {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 412px) and (max-width: 768px) {
+  .rooms {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .rooms {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
 /*# sourceMappingURL=HomePage.css.map */
