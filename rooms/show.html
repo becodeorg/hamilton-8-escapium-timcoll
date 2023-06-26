@@ -105,17 +105,18 @@
     let card;
     $.getJSON('./rooms.json',function(data)
     {
+       
         for(items of data)
         {
-                if(items.name = postname)
-                {
-                    card = items;
+            if(items.name == postname){
+                card = items;
                     numberDifficulty =items.difficulty;
+                    console.log(numberDifficulty)
                     document.querySelector('h1').innerHTML=items.name;
                     document.querySelector('header').style.backgroundImage ='url('+items.photos[0]+')';
                     $('#players').html('<i class="fa-solid fa-users icon">'+items.players[0]+'-'+items.players[1] +'<br><br>Players'); 
                     $('#time').html('<i class="fa-regular fa-clock"></i>'+items.minutes+ '<br><br>Minutes'); 
-                    
+                    console.log(card)
                     $('#phone').html('<i class="fa-solid fa-phone icon"></i>'+items.phone)
                     $('#mail').html('<i class="fa-solid fa-envelope icon"></i>'+items.email)
                     $('#skype').html('<i class="fa-brands fa-skype icon"></i>'+items.skype)
@@ -163,8 +164,11 @@
 
                    break;
                 }
+            }
+
+            
         }
-    })
+    )
     
 
     
@@ -175,8 +179,8 @@ $.getJSON('./rooms.json',function(data){
    
                 for (items of data)
                 {
-                    
-
+                if (items.name == name)
+                {
                     let div = document.createElement('div');
                     div.style.background='url('+items.photos[0]+') no-repeat';
                     div.style.height = '350px';
@@ -186,7 +190,6 @@ $.getJSON('./rooms.json',function(data){
                     div.classList.add('other-room-items')
                     //document.querySelector('#otherRooms').classList.add('d-flex');
                     document.querySelector('#otherRooms').appendChild(div)
-                    
                     div.classList.add('other')
                     document.querySelector('#otherRooms').appendChild(div)
                     let headding_one = document.createElement('h2');
@@ -216,9 +219,9 @@ $.getJSON('./rooms.json',function(data){
                     span_location.innerHTML = items.location
                     div_info.appendChild(icon_location);
                     div_info.appendChild(span_location);
-                    
+                }
 
-    
+                   
                 }
              });
     
@@ -232,6 +235,7 @@ $.getJSON('./rooms.json',function(data){
     let date = new Date();
     let year = date.getFullYear();
     let month = date.getMonth()+1; 
+    let month_current = month;
     let day = date.getDate();
     const  monthName=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
     const UP_MONTH = 'upMonth';
@@ -282,14 +286,16 @@ $.getJSON('./rooms.json',function(data){
     function calendrier(year,month){
         
         const MONTH_NB =month+12*(year-2020)
-        document.querySelector('#month').innerHTML = monthName[month-1]+ year
+        document.querySelector('#month').innerHTML = monthName[month-1]+' '+ year
         let cld = [{dayStart:2,length:31,year:2020, month:"janvier"}]
-           
+        let  monthTest;
         for(let i=0;i<MONTH_NB-1;i++)
          {
             let yearSimule = 2020+Math.floor(i/12);
             const monthSimuleLongueur= [31,getFevrierLength(yearSimule),31,30,31,30,31,31,30,31,30,31]
             let monthSimuleIndex = (i+1)-(yearSimule-2020)*12;
+            
+            
             cld [i+1]={
                 dayStart :(cld[i].dayStart+monthSimuleLongueur[monthSimuleIndex-1])%7,
                 length: monthSimuleLongueur[monthSimuleIndex],  
@@ -313,42 +319,42 @@ $.getJSON('./rooms.json',function(data){
 
 
 
+
         for(i = 0;i-1<cld[cld.length-1].length;i++)
         {
-                   
-                    if(i===day)
-                    {
-                        cases[i-1+cld[cld.length-1].dayStart].style.background='red';
-                        
-                    }
-         
-           /* if( monthName[month-1] == monthName[i])
-            {
-                */
-                //console.log('test'+i);
-                if (day == i )
-                {
-                    console.log(month)
-                   /* if(6 === 6)
-                    {
-                        
-                        cases[i-1+cld[cld.length-1].dayStart].style.background='red';
-                    }*/
-                   
-                }
-          //  }
-
-
-
-
-           /* if(day == i && monthName[month-1] == monthName[i])
-          {
            
-            //console.log(monthName[i] == monthName[month-1])
-            cases[i-1+cld[cld.length-1].dayStart].style.background='red';
-          }*/
+            let mois =document.querySelector('#month').innerHTML;
+            chiffre =mois.indexOf(2)
+      let mois_current  = mois.substring(0,chiffre-1)
+      let mois_curent_index;
+      for (let i = 0;i<monthName.length;i++)
+      {
+       
+        if(monthName[i]=== mois_current)
+        {
+            mois_curent_index = i;
+            break;
+            //console.log(mois_curent_index)
+        }
+      }
+    
+        if( month_current==(parseInt(mois_curent_index)+1))
+                  {
+                      
+                        if(i===day)
+                        {
+                            cases[i-1+cld[cld.length-1].dayStart].style.background='red';
+                        
+                        }
+                    }else{
+                        cases[i].style.background='dimgray';
+                    
+                    }
+                       
+                   
             if(i>0)
             {
+                
                 cases[i-1+cld[cld.length-1].dayStart].innerHTML = i
             }
             

@@ -316,7 +316,7 @@ p span:hover {
 
 #otherRooms {
   border: 2px solid red;
-  width: 3000px;
+  width: 1000px;
   height: 400px;
   overflow: hidden;
 }
