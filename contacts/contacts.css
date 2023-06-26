@@ -69,12 +69,27 @@ header {
 
 
 @media only screen and (max-width: 412px) {
+    header {
+        min-height: 40vh;
+        min-width: 100%;
+    }
+
     .page-heading__title {
         font-size: var(--MOBILE_H2);
     }
 }
 
-@media screen and (min-width: 412px) {
+@media screen and (min-width: 412px) and (max-width: 768px){
+    header {
+        min-height: 40vh;
+        min-width: 100vw;
+    }
+    .page-heading__title {
+        font-size: var(--BIG_SCREENS_H2);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1920px) {
     header {
         min-height: 70vh;
         min-width: 100vw;
